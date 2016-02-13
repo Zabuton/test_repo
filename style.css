@@ -1,0 +1,549 @@
+/*
+Theme Name: NOSHIRO-OTAKARA-PROJECT
+Theme URI: none
+Description: のしろおたから発見隊.
+Author: Social Escoat
+Author URI: http://eccom.jp/
+Version: 1.0
+.
+のしろおたから発見隊
+.
+
+
+2015.6.11 Ver1.0 -	
+*/
+
+@charset "utf-8";
+html {
+    width:100%;
+    height:100%;
+    min-width:980px;
+}
+body {
+    font-family:'Helvetica','Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #575757;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background: #2fa793;
+}
+
+
+img {border:0;}
+ul {list-style:none; padding:0; margin:0;}
+//ol>li {list-style-type: none; text-indent: -2.2em; position:relative;}
+
+a:link, a:visited, a:active {color:#000; text-decoration:underline;}
+a:hover,
+a:hover > span,
+h2 span,
+#shop_tab li img,
+input:hover {
+    text-decoration:none;
+    -webkit-transition: all 150ms ease;
+    -moz-transition: all 150ms ease;
+    -ms-transition: all 150ms ease;
+    -o-transition: all 150ms ease;
+    transition: all 150ms ease;
+}
+
+/*a:hover img{
+	filter: alpha(opacity=80);
+	-moz-opacity:0.8;
+	opacity:0.8;
+}*/
+
+h1 {margin:0; padding:0;}
+h1 img {display:block;}
+h2 {
+    font-size:1.5em;
+    font-weight:normal;
+    line-height:1;
+    padding:0;
+    margin:0;
+    text-align: center;
+}
+#aboutus h2 {
+    font-size: 14px;
+    line-height: 2.5;
+    padding-left: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+h3 {font-size:1.3em; font-weight:bold; line-height:1; padding:0; margin:0;}
+p {margin:0; padding:0;}
+#aboutus p {
+    display: none;
+    position: relative;
+    width:80%;
+    background: #fff;
+    margin: 0 auto 15px;
+    color:#000;
+    text-align: justify;
+    padding:10px 10px 60px 10px;
+    -o-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+.alignleft {text-align:left;}
+.alignright {text-align:right;}
+.aligncenter {text-align:center;}
+.nojavascript {width:100%; background:#fedd1e; text-align:center; font-size:1.4em;}
+.rotate {-moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg);}
+.clearfloat:after {
+    display: block;
+    clear: both;
+    height: 0px;
+    line-height: 0px;
+    visibility: hidden;
+    content: "";}
+
+/* フォントサイズ */
+.fontSS {font-size:0.7em;}
+.fontS {font-size:0.85em;}
+.fontM {font-size:1.3em;}
+.fontL {font-size:2em;}
+.fontLL {font-size:3.8em;}
+.fontB {font-weight:bold;}
+.ls {letter-spacing:5px;}
+
+/* noscript時のバグ回避 */
+.customScrollBox{overflow:auto;}
+.dragger_container{display:none;}
+
+/* カスタム指定 */
+.block {display:block;}
+.hide {display:none;}
+.minchou {font-family: "ＭＳ Ｐ明朝", "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E", "MS PMincho", "MS 明朝", serif;}
+.maru{
+	width: 86px;
+	height: 86px;
+	border:solid 1px #000;
+	-webkit-border-radius: 50%;/* 50%でもOK */
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	line-height:86px;
+	text-align:center;
+	font-size:18px;
+	font-weight: bold;
+	letter-spacing:0;
+	display:block;
+	margin:-110px auto 55px auto;
+}
+.tp {
+    filter:alpha(opacity=80);
+    -moz-opacity:0.8;
+    -webkit-opacity:0.8;
+    opacity:0.8;
+}
+
+/* メインコンテンツ部 */
+#wrap {
+    width:100%;
+    height:100%;
+    margin:0 auto 25px auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* フッター */
+footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:25px;
+    line-height: 25px;
+    font-size: 10px;
+    text-align: center;
+    background:#2fa793;
+    color:#fff;
+}
+#copyright {
+    padding:20px 0;
+    font-size:10px;
+    text-align:center;
+    background:#fff;
+}
+
+/* 地図 */
+#map-canvas {
+    height:100%;
+    margin-left: 300px;
+    box-sizing: border-box;
+    border-top:solid 12px #2fa793;
+    border-left:solid 12px #2fa793;
+    border-right:solid 12px #2fa793;
+}
+
+#top_shop {
+    width:100%;
+    height:100%;
+    padding-top:240px;
+    padding-bottom:25px;
+    box-sizing:border-box;
+    position: fixed;
+    left:0;
+    top:0;
+}
+
+#top_shop_overlay {
+    float:left;
+    width:300px;
+    height:100%;
+    background:#2fa793;
+    color:#fff;
+    overflow: hidden;
+}
+#top_shop_overlay h1 {
+    margin-top:80px;
+    font-size:40px;
+    text-align:center;
+    line-height:30px;
+    font-weight:normal;
+    height:80px;
+}
+#top_shop_overlay h1 span {
+    font-size:18px;
+}
+
+#top_shop_card {
+    display:none;
+    background:#fff;
+    width:436px;
+    height:150px;
+    position:absolute;
+    left:325px;
+    bottom:40px;
+    z-index:3001;
+}
+
+#top_shop_card img {
+    padding:10px;
+    max-width:180px;
+    max-height:130px;
+    display:block;
+    float:left;
+}
+.card_summary {
+    font-size:0.8em;
+    border-top:1px solid #666;
+}
+.card_body {
+    width:210px;
+    height:130px;
+    float:left;
+    padding:10px 10px 10px 0;
+    position:relative;
+    color:#575757;
+}
+.togeo {
+    display: none;
+}
+.toblog {
+    position:absolute;
+    right:5px;
+    bottom:5px;
+}
+.toblog a {
+    color:#DF7C75;
+    text-decoration:none;
+    font-weight: bold;
+}
+.toblog span {
+    display: inline-block;
+    width:21px;
+    height: 21px;
+    background-image: url('./images/arrow.png');
+    vertical-align: middle;
+    margin-left:5px;
+}
+.spot_h {
+    border-bottom:solid 1px #575757;
+    margin-bottom: 5px;
+    line-height: 1.8;
+}
+.spot_name {
+    font-size: 14px;
+    font-weight: bold;
+}
+.spot_history,
+.spot_station,
+.spot_bathroom,
+.spot_gourmet,
+.spot_lives,
+.spot_view, {
+    height:100%;
+}
+.spot_history {
+    border-left:solid 20px #e17ca5;
+}
+.spot_station {
+    border-left:solid 20px #c9bc08;
+}
+.spot_bathroom {
+    border-left:solid 20px #823d8c;
+}
+.spot_gourmet {
+    border-left:solid 20px #e38009;
+}
+.spot_lives {
+    border-left:solid 20px #61b120;
+}
+.spot_view {
+    border-left:solid 20px #118ce3;
+}
+
+
+.pink_btn {
+    width:335px;
+    font-size:20px;
+    color:#fff;
+    font-weight:bold;
+    background:#DF7C75;
+    border:0;
+    text-align:center;
+}
+.pink_btn:hover {
+    cursor: pointer;
+    background:#F4D2CB;
+}
+
+
+.shop_name {
+    font-size:15px;
+}
+.shop_name:before {
+    content:"●" ;
+}
+
+#shop_content {
+    width:230px;
+    height:100%;
+    border-top:solid 465px transparent;
+    border-bottom:solid 25px transparent;
+    box-sizing:border-box;
+    font-size:12px;
+    width:230px;
+    margin:0 auto;
+    overflow:scroll;
+    position: absolute;
+    left:35px;
+    top:0;
+    z-index: 1;
+}
+#shop_content a {
+    display: block;
+    color:#fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#shop_content a:hover {
+    color:#575757;
+    background: #fff;
+}
+#shop_content a:hover >span {
+    background:none;
+    color:#575757;
+}
+
+#shop_tab {
+    box-sizing: border-box;
+    width:240px;
+    margin:0 auto;
+    padding:5px 0;
+    border-top:solid 1px #fff;
+    border-bottom:solid 1px #fff;
+    background:#2fa793;
+    position: relative;
+    z-index: 2;
+}
+#shop_tab li {
+    display:block;
+    float:left;
+    width:80px;
+    height:80px;
+    text-align: center;
+    cursor: pointer;
+}
+#shop_tab li img {
+    text-align: center;
+    width:60px;
+    margin:10px;
+}
+
+#shop_tab li img:hover,
+.tab_selected img {
+    width:80px!important;
+    margin-top:0!important;
+    margin-left:0!important;
+    -moz-opacity: 0.9;
+    -webkit-opacity: 0.9;
+    -o-opacity: 0.9;
+    opacity: 0.9;
+    filter: opacity(90);
+}
+#slide_wrap {
+    margin-left:300px;
+    height:240px;
+    border-top:solid 12px #2fa793;
+    border-right:solid 12px #2fa793;
+    border-left:solid 12px #2fa793;
+    box-sizing: border-box;
+}
+#slider {
+    height:228px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header #logo {
+    float: left;
+    width:300px;
+    height: 240px;
+    background: #fff;
+}
+header #logo img {
+    display: block;
+    width:50%;
+    margin: 35px auto 0;
+}
+
+
+
+#namazu {
+    position: absolute;
+    right:10px;
+    bottom:10px;
+}
+
+#aboutus h2 span {
+    display: inline-block;
+    width:11px;
+    height:20px;
+    margin:0 10px;
+    background-image: url('./images/h2_arr.png');
+    vertical-align: middle;
+}
+
+#aboutus {
+    padding-left:12px;
+    background:#2fa793;
+    padding-bottom:1px;
+    position: relative;
+    z-index: 2;
+}
+
+.cat_history .shop_name:before {
+    color:#e17ca5;
+}
+.cat_station .shop_name:before {
+    color:#c9bc08;
+}
+.cat_bathroom .shop_name:before {
+    color:#823d8c;
+}
+.cat_gourmet .shop_name:before {
+    color:#e38009;
+}
+.cat_lives .shop_name:before {
+    color:#61b120;
+}
+.cat_view .shop_name:before {
+    color:#118ce3;
+}
+
+header {
+    width:100%;
+    height:240px;
+    position: absolute;
+    left:0;
+    top:0;
+}
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #fff;
+  z-index: 100;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #2fa793;
+  z-index: 2;
+  font-size: 16px;
+}
+
+/* 回転 */
+.kurukuru {
+    -webkit-animation: spin 1.5s linear infinite;
+    -moz-animation: spin 1.5s linear infinite;
+    -ms-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+	0% {-moz-transform: rotate(0deg);}
+	100% {-moz-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+	0% {-ms-transform: rotate(0deg);}
+	100% {-ms-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+	0% {-o-transform: rotate(0deg);}
+	100% {-o-transform: rotate(360deg);}
+}
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+/* 点滅 */
+.tenmetsu{
+	-webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
+}
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-o-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@-ms-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
